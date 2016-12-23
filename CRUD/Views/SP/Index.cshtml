@@ -1,0 +1,68 @@
+﻿@model IEnumerable<CRUD.Models.EF.sanpham>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.tensp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mota)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.soluong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id_nhom)
+            </th>
+            <th></th>
+        </tr>
+
+
+
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tensp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mota)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.soluong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_nhom)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

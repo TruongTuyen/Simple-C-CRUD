@@ -1,0 +1,66 @@
+﻿@model CRUD.Models.EF.sanpham
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>sanpham</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.tensp)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.tensp)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.mota)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.mota)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.gia)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.gia)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.soluong)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.soluong)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.id_nhom)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.id_nhom)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
